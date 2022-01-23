@@ -15,8 +15,6 @@ if (process.env.DATABASE_URL) {
 } else if (process.env.DATABASE_NAME && process.env.DATABASE_USER && process.env.DATABASE_PASSWORD && process.env.DATABASE_HOST && process.env.DATABASE_PORT) {
 	dbUrl = 'mongodb://' + process.env.DATABASE_USER + ':' + process.env.DATABASE_PASSWORD + '@' + process.env.DATABASE_HOST + ':' + process.env.DATABASE_PORT + '/' + process.env.DATABASE_NAME;
 } else {
-	dbUrl = 'mongodb+srv://csb:makemoney20012001@cluster0.rufvz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-	//  dbUrl='mongodb+srv://csb:makemoney20012001@cluster0.3hexx.mongodb.net/db_contract?retryWrites=true&w=majority';
 }
 
 var config = {
